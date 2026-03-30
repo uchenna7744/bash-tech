@@ -16,6 +16,7 @@
     background-color: #1e3f6b;
     color: white;
     position: relative;
+    overflow: hidden;
 }
 nav{
     display: flex;
@@ -274,7 +275,8 @@ nav ul li{
     justify-content: center;
     flex-wrap: wrap;
     gap:  40px;
-}    
+}   
+
                    /* seventh   */
 .seventh-container{
     width: 100%;
