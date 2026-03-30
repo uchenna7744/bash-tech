@@ -6,6 +6,10 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    background-color: black;
+    color: white;
+}
 .ozy{
     padding: 40px 20px;
     max-width: 1200px;
