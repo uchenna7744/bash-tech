@@ -6,10 +6,6 @@
     list-style: none;
     text-decoration: none;
 }
-body{
-    background-color: black;
-    color: white;
-}
 .ozy{
     padding: 40px 20px;
     max-width: 1200px;
@@ -172,7 +168,7 @@ nav ul li{
     color: white;
     background-color: rgba(22, 42, 65, 0.678);
     width: 400px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -183,7 +179,7 @@ nav ul li{
 .fourth-card2{
     background-color: rgba(255, 255, 255, 0.685);
     width: 400px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -313,6 +309,7 @@ nav ul li{
                   /* eight */
 .eighth-container{
     width: 100%;
+    position: relative;
 }
 .eight1{
     width: 330px;
@@ -326,6 +323,16 @@ nav ul li{
     display: flex;
     flex-direction: column;
     gap: 10px ;
+    position: relative;
+}
+.eat-images{
+    position: absolute;
+    left: 70px;
+    top: 50px;
+}
+.eat-images img{
+    width: 200px;
+    opacity: 0.1;
 }
                       /* ninth */
 .ninth-container{
@@ -776,11 +783,118 @@ nav ul li{
     border-radius: 8px;
     background-color: white;
     padding: 10px;
-    box-shadow: var(--shadow1);
+    box-shadow: 4px 6px 9px rgba(0, 0, 0, 0.171);
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.action_buttons > ul{
+    display: flex;
+    gap: 0 20px;
+}
+.action_buttons > ul > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    color: white;
+    padding: 5px 10px;
+    position: relative;
+}
+.action_buttons > ul > li:last-child{
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.action_buttons > ul > li:last-child:hover{
+    border-color: yellow;
+    color: yellow;
+    transition: all 1s linear;
+}
+.action_buttons > ul > li:not(:last-child):before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, 0);
+    width: 30px;
+    height: 3px;
+    background-color: yellow;
+    animation: navAmin 0.4s linear;
+    display: none;
+}
+@keyframes navAmin{
+    0%{
+        transform: translate(-50%, -10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}    
+.action_buttons > ul > li:hover::before{
+    display: inline;
+}
+.action_buttons > ul > li a{
+    color: white;
+    font-size: 17px;
+}
+.action_buttons > ul > li:hover a{
+    color: yellow;
+    transition: all 0.9s linear;
+}
+.action_buttons > ul > li:hover a{
+    transition: all 0.2s linear;
+    transform: scale(0.9);
+}
+.action_buttons > ul > li .navdrop{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 5px 0;
+    color: black;
+    width: 150px;
+    z-index: 99;
+    border-bottom: 3px solid yellow;
+    display: none;
+    animation: navdropAnim 0.9s ease-out;
+}
+@keyframes navdropAnim{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    70%{
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.action_buttons > ul > li:hover > .navdrop{
+    display: block;
+}
+.action_buttons .navdrop > ul{
+    padding: 0;
+    margin: 0;
+    flex-direction:column ;
+    
+    list-style: none;
+}
+.action_buttons .navdrop ul li{
+    font-size: 13px;
+    padding: 0 9px;
+    cursor: pointer;
+}
+.action_buttons .navdrop ul li:hover{
+    background-color: #f3f3f3;
+}
+.action_buttons .navdrop ul li{
+    color: black;
 }
 
                      /* footer */
